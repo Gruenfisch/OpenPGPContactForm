@@ -67,7 +67,7 @@ können also über den Selector "form.secform-on" das Formular und seine Unterelem
  Beispielgrafiken ganz oben) und den Schlüssel und ggf. weitere Hinweise zur Verschlüsselung ein- oder ausblenden.
  Verwenden Sie beispielsweise folgendes:
 
-`
+```
 /* Hier Standard-Styles für das Formular definieren */
 form.secform { }
  
@@ -80,7 +80,7 @@ form.secform-on .hidden { display: block }
  
 /* Styles fuer das bereits verschluesselte Textarea hier definieren: */
 form.secform-on textarea[name='message'].encrypted { background: #f8fff3; }
-`
+```
 
 
 ## Optionen ##
