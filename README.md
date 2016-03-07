@@ -5,7 +5,7 @@ Beschreibung
 ------------
 
 OpenPGP-Verschlüsselung im eigenen Kontaktformular auf der Webseite verwenden.
-Entwickelt für ein Standard-Contao-Kontaktformular. 
+Ursprünglich entwickelt für ein Standard-Contao-Kontaktformular. 
 
 Anforderungen
 -------------
@@ -48,11 +48,11 @@ Optionen
 Bezeichner                      |   Standard-Wert oder Beispiel                                                     |   Erklärung
 ----------                          ---------------------------                                                         --------- 
 formID                          |   "form#secform"                                                                  |   Geben Sie einen ID-Selektor für das zu bearbeitende Formular an
-formSubmitButton                |   "form#secform input[type='submit']"                                             | Geben Sie einen Selektor für den Versenden-Button im zu bearbeitenden Formular an. 
-formMessageTextarea             |   "form#secform textarea[name='message']"                                         | Geben Sie einen Selektor für das Nachrichten-Eingabefeld an. Als Standard wird innerhalb des zu bearbeitenden Formulars nach einem Textarea mit dem Name-Attribut mit dem "message" gesucht.  
-keyContainer                    |   "#secformkey"                                                                   | ID-Selektor für den GnuPG-Schlüssel-Container 
-formSubmitButtonLabel           |   "Ihr Nachricht verschlüsselt versenden"                                         | Optional (wird nur gesetzt, wenn angegeben): Das Label für den Versenden-Button, wenn die Verschlüsslungsfunktion verfügbar ist 
-formMessageTextareaPlaceholder  |   "Bitte geben Sie hier Ihren Namen an und beschreiben Sie mir kurz Ihr Anliegen" | Optional (wird nur gesetzt, wenn angegeben): Der Platzhalter-Text für das Textarea-Eingabefeld, wenn die Verschlüsslungsfunktion verfügbar ist 
+formSubmitButton                |   "form#secform input[type='submit']"                                             |   Geben Sie einen Selektor für den Versenden-Button im zu bearbeitenden Formular an. 
+formMessageTextarea             |   "form#secform textarea[name='message']"                                         |   Geben Sie einen Selektor für das Nachrichten-Eingabefeld an. Als Standard wird innerhalb des zu bearbeitenden Formulars nach einem Textarea mit dem Name-Attribut mit dem "message" gesucht.  
+keyContainer                    |   "#secformkey"                                                                   |   ID-Selektor für den GnuPG-Schlüssel-Container 
+formSubmitButtonLabel           |   "Ihr Nachricht verschlüsselt versenden"                                         |   Optional (wird nur gesetzt, wenn angegeben): Das Label für den Versenden-Button, wenn die Verschlüsslungsfunktion verfügbar ist 
+formMessageTextareaPlaceholder  |   "Bitte geben Sie hier Ihren Namen an und beschreiben Sie mir kurz Ihr Anliegen" |   Optional (wird nur gesetzt, wenn angegeben): Der Platzhalter-Text für das Textarea-Eingabefeld, wenn die Verschlüsslungsfunktion verfügbar ist 
 
 
 Lizenz 
