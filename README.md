@@ -1,8 +1,8 @@
 # OpenPGPContacForm - secform #
-===============================
+
 
 ## Beschreibung ##
-------------------
+
 
 OpenPGP-Verschlüsselung im eigenen Kontaktformular auf der Webseite verwenden.
 Ursprünglich entwickelt für ein Standard-Contao-Kontaktformular. 
@@ -10,7 +10,7 @@ Ursprünglich entwickelt für ein Standard-Contao-Kontaktformular.
 Ich freue mich über Hinweise und Kritiken. 
 
 ## Anforderungen ##
--------------------
+
 
 * JQuery 1.11.3
 * jquery.cookie.js
@@ -24,9 +24,9 @@ Ich freue mich über Hinweise und Kritiken.
     
 
 ## Installation ##
-------------------
 
-#### JS-Framework und Skripte/Klassen bereit stellen ####
+
+#### 1. JS-Framework und Skripte/Klassen bereit stellen ####
 
 Binden Sie diese Anweisungen z.B. im Header Ihrer Webseite ein: 
 
@@ -37,7 +37,7 @@ Binden Sie diese Anweisungen z.B. im Header Ihrer Webseite ein:
 ```
 
 
-#### Aufruf/Instanzierung ####
+#### 2. Aufruf/Instanzierung ####
 
 Fügen Sie diesen Code unterhalb des Formulars oder am Ende der Seite vor dem
 abschließenden Body-Tag ein: 
@@ -59,7 +59,7 @@ jQuery(document).ready(function ()
 ```
 
 
-#### Gestaltung anpassen ####
+#### 3. Gestaltung anpassen ####
 
 Passen Sie zuletzt optional das CSS entsprechend an. Sofern die technischen Voraussetzungen für die Verwendung der
 Verschlüsselung im Browser erfüllt zu sein scheinen, wird dem Formular die CSS-Klasse "secform-on" zugewiesen. Sie 
@@ -84,7 +84,7 @@ form.secform-on textarea[name='message'].encrypted { background: #f8fff3; }
 
 
 ## Optionen ##
---------------
+
 
 
 Bezeichner                      |   Standard-Wert oder Beispiel                                                     |   Erklärung
@@ -98,7 +98,7 @@ formMessageTextareaPlaceholder  |   "Bitte geben Sie hier Ihren Namen an und bes
 
 
 ## Lizenz ##
-------------
+
 
 OpenPGPContacForm - secform ist ein Projekt von 
 Gruenfisch Webdesign: Oliver Richter http://www.gruenfisch-webdesign.de
