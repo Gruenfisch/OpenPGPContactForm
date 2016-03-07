@@ -6,6 +6,9 @@ Gruenfisch Webdesign: Oliver Richter http://www.gruenfisch-webdesign.de
 Dieses Werk bzw. Inhalt (jquery.secform.js) steht unter einer 
 Creative Commons Namensnennung - Nicht-kommerziell -
 Weitergabe unter gleichen Bedingungen 3.0 Deutschland Lizenz
+
+Beachten Sie auch die Rechte der Entwickler bzw. die Lizenzen der Dokumente 
+jquery.cookie.js und openpgp.min.js, deren Inhaber ich nicht bin. 
 ********************************************************************************
 */
 
