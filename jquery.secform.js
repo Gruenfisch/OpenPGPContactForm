@@ -1,18 +1,14 @@
+/*!
+********************************************************************************
+OpenPGPContacForm - secform by 
+Gruenfisch Webdesign: Oliver Richter http://www.gruenfisch-webdesign.de
 
+Dieses Werk bzw. Inhalt (jquery.secform.js) steht unter einer 
+Creative Commons Namensnennung - Nicht-kommerziell -
+Weitergabe unter gleichen Bedingungen 3.0 Deutschland Lizenz
+********************************************************************************
+*/
 
-
-////////////////////////////////////////////////////////////////////////////////
-// Start: gnuPG secForm Version 0.3 / Gruenfisch Webdesign 2015/Oliver Richter 
-// 
-// + inkl. Cookie-Check
-// + Label fuer das Textarea wird ggf. gesucht und mit Text erweitert
-// + Dokumentation fortgesetzt (german)
-// 
-// Dieses Werk bzw. Inhalt (jquery.secform.js) steht unter einer 
-// Creative Commons Namensnennung - Nicht-kommerziell -
-// Weitergabe unter gleichen Bedingungen 3.0 Deutschland Lizenz .
-//
-////////////////////////////////////////////////////////////////////////////////
 var encryptedForm = 
     {
                         
@@ -160,5 +156,4 @@ var encryptedForm =
             }
     }
 
-        
- 
+       
