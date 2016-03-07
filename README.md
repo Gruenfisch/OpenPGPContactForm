@@ -5,6 +5,14 @@
 
 
 OpenPGP-Verschlüsselung im eigenen Kontaktformular auf der Webseite verwenden.
+
+Inspiriert durch den Artikel unter https://www.privacy-handbuch.de/handbuch_32v.htm (vielen Dank an die Autoren dort) 
+habe ich mir mal die JavaScript-Implementierung von OpenPGP (siehe http://openpgpjs.org) angesehen und eine kleine 
+JavaScript-Klasse für das Standard-Contao-Kontaktformular geschrieben. Diese erweitert, sofern technisch
+möglich (je nach Browser und Einstellungen), das Kontaktformular so, dass die Daten im Nachrichten-Eingabefeld 
+vor dem Versenden mit meinem öffentlichen GnuPG-Schlüssel für meine E-Mailadresse verschlüsselt werden.
+Sollten die technischen Voraussetzungen nicht erfüllt sein, wird das Standard-Kontaktformular angezeigt.
+
 Ursprünglich entwickelt für ein Standard-Contao-Kontaktformular. 
 
 Ich freue mich über Hinweise und Kritiken. 
