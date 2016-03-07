@@ -66,7 +66,7 @@ Verschlüsselung im Browser erfüllt zu sein scheinen, wird dem Formular die CSS-K
 können also über den Selector "form.secform-on" das Formular und seine Unterelemente entsprechend anpassen (siehe meine
  Beispielgrafiken ganz oben) und den Schlüssel und ggf. weitere Hinweise zur Verschlüsselung ein- oder ausblenden.
  Verwenden Sie beispielsweise folgendes:
-
+ 
 ```
 /* Hier Standard-Styles für das Formular definieren */
 form.secform { }
