@@ -1,16 +1,16 @@
-OpenPGPContacForm - secform 
-===========================
+# OpenPGPContacForm - secform #
+===============================
 
-Beschreibung
-------------
+## Beschreibung ##
+------------------
 
 OpenPGP-Verschlüsselung im eigenen Kontaktformular auf der Webseite verwenden.
 Ursprünglich entwickelt für ein Standard-Contao-Kontaktformular. 
 
 Ich freue mich über Hinweise und Kritiken. 
 
-Anforderungen
--------------
+## Anforderungen ##
+-------------------
 
 * JQuery 1.11.3
 * jquery.cookie.js
@@ -23,11 +23,10 @@ Anforderungen
     
     
 
-Installation
-------------
+## Installation ##
+------------------
 
-JS-Framework und Skripte/Klassen bereit stellen:
-------------------------------------------------
+#### JS-Framework und Skripte/Klassen bereit stellen ####
 
 Binden Sie diese Anweisungen z.B. im Header Ihrer Webseite ein: 
 
@@ -38,8 +37,7 @@ Binden Sie diese Anweisungen z.B. im Header Ihrer Webseite ein:
 ```
 
 
-Aufruf/Instanzierung: 
----------------------
+#### Aufruf/Instanzierung ####
 
 Fügen Sie diesen Code unterhalb des Formulars oder am Ende der Seite vor dem
 abschließenden Body-Tag ein: 
@@ -61,12 +59,13 @@ jQuery(document).ready(function ()
 ```
 
 
-CSS
----
+#### Gestaltung anpassen ####
 
-Passen Sie das Aussehen an. Verstecken Sie ggf. via CSS den Schlüssel-Bereich, 
-sofern er nicht sichtbar sein soll. Kennzeichen Sie das Formular entsprechend, wenn die
-Verschlüsselung verfügbar ist. 
+Passen Sie zuletzt optional das CSS entsprechend an. Sofern die technischen Voraussetzungen für die Verwendung der
+Verschlüsselung im Browser erfüllt zu sein scheinen, wird dem Formular die CSS-Klasse "secform-on" zugewiesen. Sie 
+können also über den Selector "form.secform-on" das Formular und seine Unterelemente entsprechend anpassen (siehe meine
+ Beispielgrafiken ganz oben) und den Schlüssel und ggf. weitere Hinweise zur Verschlüsselung ein- oder ausblenden.
+ Verwenden Sie beispielsweise folgendes:
 
 `
 /* Hier Standard-Styles für das Formular definieren */
@@ -84,8 +83,8 @@ form.secform-on textarea[name='message'].encrypted { background: #f8fff3; }
 `
 
 
-Optionen
---------
+## Optionen ##
+--------------
 
 
 Bezeichner                      |   Standard-Wert oder Beispiel                                                     |   Erklärung
@@ -98,8 +97,8 @@ formSubmitButtonLabel           |   "Ihr Nachricht verschlüsselt versenden"     
 formMessageTextareaPlaceholder  |   "Bitte geben Sie hier Ihren Namen an und beschreiben Sie mir kurz Ihr Anliegen" |   Optional (wird nur gesetzt, wenn angegeben): Der Platzhalter-Text für das Textarea-Eingabefeld, wenn die Verschlüsslungsfunktion verfügbar ist 
 
 
-Lizenz 
-------
+## Lizenz ##
+------------
 
 OpenPGPContacForm - secform ist ein Projekt von 
 Gruenfisch Webdesign: Oliver Richter http://www.gruenfisch-webdesign.de
