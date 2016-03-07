@@ -7,6 +7,8 @@ Beschreibung
 OpenPGP-Verschlüsselung im eigenen Kontaktformular auf der Webseite verwenden.
 Ursprünglich entwickelt für ein Standard-Contao-Kontaktformular. 
 
+Ich freue mich über Hinweise und Kritiken. 
+
 Anforderungen
 -------------
 
@@ -24,13 +26,30 @@ Anforderungen
 Installation
 ------------
 
-Aufruf/Instanzierung: 
+JS-Framework und Skripte/Klassen bereit stellen:
+------------------------------------------------
+
+Binden Sie diese Anweisungen z.B. im Header Ihrer Webseite ein: 
 
 ```
+<script src="/jquery.cookie.min.js"></script>
+<script src="/openpgp.min.js"></script>
+<script src="/jquery.secform.min.js"></script>
+```
+
+
+Aufruf/Instanzierung: 
+---------------------
+
+Fügen Sie diesen Code unterhalb des Formulars oder am Ende der Seite vor dem
+abschließenden Body-Tag ein: 
+
+```
+<script>
 jQuery(document).ready(function () 
     {
         var encryptedForm1 = new encryptedForm.init({
-            // Definieren Sie hier Ihre Optionen:
+            // Definieren Sie hier Ihre Optionen (siehe Dokumentation):
              
             // formID: 'form#secform', 
             // keyContainer: '#secformkey',
@@ -38,7 +57,31 @@ jQuery(document).ready(function ()
             // und so weiter...
         });
     });
+</script>
 ```
+
+
+CSS
+---
+
+Passen Sie das Aussehen an. Verstecken Sie ggf. via CSS den Schlüssel-Bereich, 
+sofern er nicht sichtbar sein soll. Kennzeichen Sie das Formular entsprechend, wenn die
+Verschlüsselung verfügbar ist. 
+
+`
+/* Hier Standard-Styles für das Formular definieren */
+form.secform { }
+ 
+/* Styles für den Fall, dass Verschlüsselungsoption verfügbar ist definieren */
+form.secform-on { }
+ 
+/* Ein- und Ausblenden des Keys und der Hinweismeldungen */
+form.secform .hidden { display: none }
+form.secform-on .hidden { display: block }
+ 
+/* Styles fuer das bereits verschluesselte Textarea hier definieren: */
+form.secform-on textarea[name='message'].encrypted { background: #f8fff3; }
+`
 
 
 Optionen
@@ -66,4 +109,5 @@ Creative Commons Namensnennung - Nicht-kommerziell -
 Weitergabe unter gleichen Bedingungen 3.0 Deutschland Lizenz
 
 Beachten Sie auch die Rechte der Entwickler bzw. die Lizenzen der Dokumente 
-jquery.cookie.js und openpgp.min.js, deren Inhaber ich nicht bin. 
+jquery.cookie.js und openpgp.min.js, deren Inhaber ich nicht bin. Vielen Dank 
+an die Entwickler dort!
