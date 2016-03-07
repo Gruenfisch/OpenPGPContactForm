@@ -13,28 +13,32 @@ Anforderungen
 * JQuery 1.11.3
 * jquery.cookie.js
 * openpgp.min.js (https://github.com/openpgpjs/openpgpjs/blob/master/dist/openpgp.min.js)
-* Spezifische Markup-Struktur mit einem Formular (ID = 'secform') 
-    * mit Nachrichten (ID = 'message')- und einem 
-    * E-Mailadresse-Feld (ID = 'email'), 
+* Spezifische Markup-Struktur mit 
+    * einem Formular (ID = 'secform') 
+    * mit Nachrichten-Feld (ID = 'message')
+    * mit einem Absenden-Button 
     * sowie einem pre-Tag (ID = 'secformkey'), der den zu verwendenden GnuPG-Schlüssel enthält.  
+    * (die IDs können angepasst werden)
+    
 
 Installation
 ------------
 
-* Initialisierung
+Aufruf/Instanzierung: 
 
-`
+```
 jQuery(document).ready(function () 
     {
         var encryptedForm1 = new encryptedForm.init({
-            // define your options here:  
+            // Definieren Sie hier Ihre Optionen:
              
             // formID: 'form#secform', 
-            // keyContainer: "#secformkey"
-            // and so on...
+            // keyContainer: '#secformkey',
+            // formSubmitButtonLabel: 'Ihre Nachricht verschlüsselt senden'
+            // und so weiter...
         });
     });
-`
+```
 
 
 Lizenz 

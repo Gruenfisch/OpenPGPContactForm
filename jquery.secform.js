@@ -37,24 +37,24 @@ var encryptedForm =
                         // ...wenn Zufallsgenerator verfuegbar, Key-Container vorhanden und nicht leer und Cookie-Support verfuegbar ist 
                         if (  (window.crypto.getRandomValues) && (keyContainer.length) && (! $(keyContainer).is(':empty') ) && cookieSupportCheck() )
                             {     
-                                // alert("You are ready for encryption!")
+                                // alert("Die Verschlüsselung sollte funktionieren!")
 
-                                // add new 'ready to encrypt' css class for form tag
+                                // CSS-Klasse fuer 'Bereit zur Verschluesselung' im Form-Tag hinzufuegen
                                 $(formID).addClass('secform-on');
                                 
-                                // Change submit button label if text given 
+                                // Den Beschreibungstext fuer den Button anpassen, sofern vorhanden 
                                 if (arg.formSubmitButtonLabel) 
                                     {
                                         $(formSubmitButton).val(arg.formSubmitButtonLabel);
                                     }
                                     
-                                // Change placeholder label for textarea if text given 
+                                // Den Placeholder-Text fuer das Textarea anpassen, sofern vorhanden 
                                 if (arg.formMessageTextareaPlaceholder)
                                     {
                                          $(formMessageTextarea).attr('placeholder', arg.formMessageTextareaPlaceholder);
                                     }
                                
-                                // add encryption information to textarea label text 
+                                // Verschluesselungsinfo im Label fur das Textarea hinzufuegen 
                                 if (  $(formMessageTextarea).attr('id')  )
                                     {
                                      if (  $("label[for='"+$(formMessageTextarea).attr('id')+"']").length  )
@@ -67,7 +67,7 @@ var encryptedForm =
                                 // Pruefen, ob Cookie vorhanden ist von vorheriger Verschluesselung und auch Text im Textarea steht (steht naemlich nicht, wenn die Seite manuell abermals direkt via URL aufgerufen wurde)                
                                 if (  $.cookie("secform-encryptionInProgress")  &&  ($(formMessageTextarea).val().length)  )
                                     {
-                                        // change textarea (make it readonly and add css class )
+                                        // Textarea anpassen (nur-lesen setzen und CSS-Klasse hinzufuegen)
                                         $(formMessageTextarea).prop('readonly', true); 
                                         $(formMessageTextarea).addClass('encrypted');  
                                     }   
@@ -99,7 +99,7 @@ var encryptedForm =
                             }        
                         else 
                             {
-                                // alert("You are not ready for encryption!")
+                                // alert("Nicht bereit zur Verschluesselung")
                                 // $(formSubmitButton).val("Ihre Nachricht versenden");
                             }
                     }
