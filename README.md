@@ -13,7 +13,10 @@ Anforderungen
 * JQuery 1.11.3
 * jquery.cookie.js
 * openpgp.min.js (https://github.com/openpgpjs/openpgpjs/blob/master/dist/openpgp.min.js)
-* Spezische Markup-Struktur mit einem Formular (ID = 'secform') mit Nachrichten (ID = 'message')- und einem E-Mailadresse-Feld (ID = 'email'), sowie einem pre-Tag (ID = 'secformkey'), der den zu verwendenden GnuPG-Schlüssel enthält.  
+* Spezifische Markup-Struktur mit einem Formular (ID = 'secform') 
+    * mit Nachrichten (ID = 'message')- und einem 
+    * E-Mailadresse-Feld (ID = 'email'), 
+    * sowie einem pre-Tag (ID = 'secformkey'), der den zu verwendenden GnuPG-Schlüssel enthält.  
 
 Installation
 ------------
