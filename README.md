@@ -4,18 +4,18 @@
 ## Beschreibung ##
 
 
-OpenPGP-Verschlüsselung im eigenen Kontaktformular auf der Webseite verwenden.
+OpenPGP-VerschlÃ¼sselung im eigenen Kontaktformular auf der Webseite verwenden.
 
 Inspiriert durch den Artikel unter https://www.privacy-handbuch.de/handbuch_32v.htm (vielen Dank an die Autoren dort) 
 habe ich mir mal die JavaScript-Implementierung von OpenPGP (siehe http://openpgpjs.org) angesehen und eine kleine 
-JavaScript-Klasse für das Standard-Contao-Kontaktformular geschrieben. Diese erweitert, sofern technisch
-möglich (je nach Browser und Einstellungen), das Kontaktformular so, dass die Daten im Nachrichten-Eingabefeld 
-vor dem Versenden mit meinem öffentlichen GnuPG-Schlüssel für meine E-Mailadresse verschlüsselt werden.
-Sollten die technischen Voraussetzungen nicht erfüllt sein, wird das Standard-Kontaktformular angezeigt.
+JavaScript-Klasse fÃ¼r das Standard-Contao-Kontaktformular geschrieben. Diese erweitert, sofern technisch
+mÃ¶glich (je nach Browser und Einstellungen), das Kontaktformular so, dass die Daten im Nachrichten-Eingabefeld 
+vor dem Versenden mit meinem Ã¶ffentlichen GnuPG-SchlÃ¼ssel fÃ¼r meine E-Mailadresse verschlÃ¼sselt werden.
+Sollten die technischen Voraussetzungen nicht erfÃ¼llt sein, wird das Standard-Kontaktformular angezeigt.
 
-Ursprünglich entwickelt für ein Standard-Contao-Kontaktformular. 
+UrsprÃ¼nglich entwickelt fÃ¼r ein Standard-Contao-Kontaktformular. 
 
-Ich freue mich über Hinweise und Kritiken. 
+Ich freue mich Ã¼ber Hinweise und Kritiken. 
 
 ## Anforderungen ##
 
@@ -23,11 +23,11 @@ Ich freue mich über Hinweise und Kritiken.
 * JQuery 1.11.3
 * jquery.cookie.js
 * openpgp.min.js (https://github.com/openpgpjs/openpgpjs/blob/master/dist/openpgp.min.js)
-* Spezifische Markup-Struktur mit (die hier genannten Standard-IDs können natürlich später angepasst werden)
+* Spezifische Markup-Struktur mit (die hier genannten Standard-IDs kÃ¶nnen natÃ¼rlich spÃ¤ter angepasst werden)
     * einem Formular (ID = 'secform') 
     * mit Nachrichten-Feld (ID = 'message')
     * mit einem Absenden-Button 
-    * sowie einem pre-Tag (ID = 'secformkey'), der den zu verwendenden GnuPG-Schlüssel enthält.  
+    * sowie einem pre-Tag (ID = 'secformkey'), der den zu verwendenden GnuPG-SchlÃ¼ssel enthÃ¤lt.  
     
     
 
@@ -47,8 +47,8 @@ Binden Sie diese Anweisungen z.B. im Header Ihrer Webseite ein:
 
 #### 2. Aufruf/Instanzierung ####
 
-Fügen Sie diesen Code unterhalb des Formulars oder am Ende der Seite vor dem
-abschließenden Body-Tag ein: 
+FÃ¼gen Sie diesen Code unterhalb des Formulars oder am Ende der Seite vor dem
+abschlieÃŸenden Body-Tag ein: 
 
 ```
 <script>
@@ -59,7 +59,7 @@ jQuery(document).ready(function ()
              
             // formID: 'form#secform', 
             // keyContainer: '#secformkey',
-            // formSubmitButtonLabel: 'Ihre Nachricht verschlüsselt senden'
+            // formSubmitButtonLabel: 'Ihre Nachricht verschlÃ¼sselt senden'
             // und so weiter...
         });
     });
@@ -69,17 +69,17 @@ jQuery(document).ready(function ()
 
 #### 3. Gestaltung anpassen ####
 
-Passen Sie zuletzt optional das CSS entsprechend an. Sofern die technischen Voraussetzungen für die Verwendung der
-Verschlüsselung im Browser erfüllt zu sein scheinen, wird dem Formular die CSS-Klasse "secform-on" zugewiesen. Sie 
-können also über den Selector "form.secform-on" das Formular und seine Unterelemente entsprechend anpassen (siehe meine
- Beispielgrafiken ganz oben) und den Schlüssel und ggf. weitere Hinweise zur Verschlüsselung ein- oder ausblenden.
+Passen Sie zuletzt optional das CSS entsprechend an. Sofern die technischen Voraussetzungen fÃ¼r die Verwendung der
+VerschlÃ¼sselung im Browser erfÃ¼llt zu sein scheinen, wird dem Formular die CSS-Klasse "secform-on" zugewiesen. Sie 
+kÃ¶nnen also Ã¼ber den Selector "form.secform-on" das Formular und seine Unterelemente entsprechend anpassen (siehe meine
+ Beispielgrafiken ganz oben) und den SchlÃ¼ssel und ggf. weitere Hinweise zur VerschlÃ¼sselung ein- oder ausblenden.
  Verwenden Sie beispielsweise folgendes:
  
 ```
-/* Hier Standard-Styles für das Formular definieren */
+/* Hier Standard-Styles fÃ¼r das Formular definieren */
 form.secform { }
  
-/* Styles für den Fall, dass Verschlüsselungsoption verfügbar ist definieren */
+/* Styles fÃ¼r den Fall, dass VerschlÃ¼sselungsoption verfÃ¼gbar ist definieren */
 form.secform-on { }
  
 /* Ein- und Ausblenden des Keys und der Hinweismeldungen */
@@ -95,21 +95,21 @@ form.secform-on textarea[name='message'].encrypted { background: #f8fff3; }
 
 
 
-Bezeichner                      |   Standard-Wert oder Beispiel                                                     |   Erklärung
+Bezeichner                      |   Standard-Wert oder Beispiel                                                     |   ErklÃ¤rung
 ----------                      |   ---------------------------                                                     |   --------- 
-formID                          |   "form#secform"                                                                  |   Geben Sie einen ID-Selektor für das zu bearbeitende Formular an
-formSubmitButton                |   "form#secform input[type='submit']"                                             |   Geben Sie einen Selektor für den Versenden-Button im zu bearbeitenden Formular an. 
-formMessageTextarea             |   "form#secform textarea[name='message']"                                         |   Geben Sie einen Selektor für das Nachrichten-Eingabefeld an. Als Standard wird innerhalb des zu bearbeitenden Formulars nach einem Textarea mit dem Name-Attribut mit dem "message" gesucht.  
-keyContainer                    |   "#secformkey"                                                                   |   ID-Selektor für den GnuPG-Schlüssel-Container 
-formSubmitButtonLabel           |   "Ihr Nachricht verschlüsselt versenden"                                         |   Optional (wird nur gesetzt, wenn angegeben): Das Label für den Versenden-Button, wenn die Verschlüsslungsfunktion verfügbar ist 
-formMessageTextareaPlaceholder  |   "Bitte geben Sie hier Ihren Namen an und beschreiben Sie mir kurz Ihr Anliegen" |   Optional (wird nur gesetzt, wenn angegeben): Der Platzhalter-Text für das Textarea-Eingabefeld, wenn die Verschlüsslungsfunktion verfügbar ist 
+formID                          |   "form#secform"                                                                  |   Geben Sie einen ID-Selektor fÃ¼r das zu bearbeitende Formular an
+formSubmitButton                |   "form#secform input[type='submit']"                                             |   Geben Sie einen Selektor fÃ¼r den Versenden-Button im zu bearbeitenden Formular an. 
+formMessageTextarea             |   "form#secform textarea[name='message']"                                         |   Geben Sie einen Selektor fÃ¼r das Nachrichten-Eingabefeld an. Als Standard wird innerhalb des zu bearbeitenden Formulars nach einem Textarea mit dem Name-Attribut mit dem "message" gesucht.  
+keyContainer                    |   "#secformkey"                                                                   |   ID-Selektor fÃ¼r den GnuPG-SchlÃ¼ssel-Container 
+formSubmitButtonLabel           |   "Ihr Nachricht verschlÃ¼sselt versenden"                                         |   Optional (wird nur gesetzt, wenn angegeben): Das Label fÃ¼r den Versenden-Button, wenn die VerschlÃ¼sslungsfunktion verfÃ¼gbar ist 
+formMessageTextareaPlaceholder  |   "Bitte geben Sie hier Ihren Namen an und beschreiben Sie mir kurz Ihr Anliegen" |   Optional (wird nur gesetzt, wenn angegeben): Der Platzhalter-Text fÃ¼r das Textarea-Eingabefeld, wenn die VerschlÃ¼sslungsfunktion verfÃ¼gbar ist 
 
 
 ## Lizenz ##
 
 
 OpenPGPContacForm - secform ist ein Projekt von 
-Gruenfisch Webdesign: Oliver Richter http://www.gruenfisch-webdesign.de
+Gruenfisch Webdesign: http://www.gruenfisch-webdesign.de
 
 Dieses Werk bzw. Inhalt (jquery.secform.js) steht unter einer 
 Creative Commons Namensnennung - Nicht-kommerziell -
